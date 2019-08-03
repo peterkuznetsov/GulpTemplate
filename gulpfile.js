@@ -12,7 +12,7 @@ var gulp       = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer');
 
 var js_libs = [
-	'app/libs/jquery/jquery.min.js'
+	
 ];
 
 gulp.task('sass', function() {
