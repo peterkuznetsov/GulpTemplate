@@ -31,11 +31,15 @@ gulp.task('css_libs', function() {
 		.pipe(browserSync.reload({stream: true}))
 });
 gulp.task('js_libs', function() {
-	return gulp.src(js_libs)
+	if (js_libs.length == 0) {
+		return null
+	} else {
+		return gulp.src(js_libs)
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('app/js'))
 		.pipe(browserSync.reload({stream: true}))
+	}
 });
 
 
